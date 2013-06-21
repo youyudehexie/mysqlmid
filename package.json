@@ -1,0 +1,9 @@
+{
+  "name": "mysqlmid",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "mysql": "2.0.0-alpha8",
+    "mohair": "*"
+  }
+}
