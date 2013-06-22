@@ -1,4 +1,3 @@
-//var User = require('./user');
 require('coffee-script');
 var mohair = require('mohair');
 var mysql = require('../driver/mysql');
@@ -21,13 +20,7 @@ var where = {
 
 
 var User = Schema('User', 'weibo_tag');
-//var User1 = Schema('User', 'weibo_tag');
-//console.log(User);
-User.test(where, {join: 'JOIN A ON A.B = B.A'});
-/*
-var Schema = function(table, name){
-	var name = function()
-}
 
-//['join']('JOIN A ON A.B = B.A');
-User.test(where, {join: 'JOIN A ON A.B = B.A'}); */
+User.find(where, function(err, result){
+	console.log(err, result);
+})
