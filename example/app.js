@@ -5,17 +5,40 @@ var opt = {
 	host: '127.0.0.1',
 	user: 'root',
 	password: '123456',
-	database: 'weibo'
+	database: 'wechat'
 }
 
 mysqlmid.init(opt);
 
-var User = Schema('User', 'weibo_tag');
+var User = require('./user');
+
 
 var where = {
-	tag_status: 0
+	type: 0
 }
 
-User.findOne(where, function(err, result){
-	console.log(err, result);
-})
+var fun1 = function(rule){
+    return rule
+}
+
+var fun2 = function(rule){
+    console.log(rule);
+}
+
+User.findOne(where)
+ .then(fun1)
+ .then(fun2, console.error);
+/*
+var findRule = function(where, cb){
+    var deferred = Q.defer();
+    User.findOne(where, function(err, result){
+        if(err) deferred.reject(err); 
+        else deferred.resolve(result);
+    })
+    return deferred.promise.nodeify(cb);
+}
+*/
+/*
+findRule(where).then(console.log, console.error);
+*/
+

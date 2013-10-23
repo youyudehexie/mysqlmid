@@ -1,10 +1,11 @@
 {
   "name": "mysqlmid",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
   "dependencies": {
     "mysql": "2.0.0-alpha8",
     "mohair": "*",
-    "coffee-script": "~1.6.3"
+    "coffee-script": "~1.6.3",
+    "q": "~0.9.7"
   }
 }

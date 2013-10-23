@@ -1,5 +1,5 @@
-var Schema = require('./schema');
-var User = Schema('User', 'weibo_tag');
+var Schema = require('../lib').Schema;
+var User = Schema('rule');
 
 module.exports = User;
 
