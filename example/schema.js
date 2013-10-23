@@ -2,7 +2,6 @@ var Mysqlmid = require('../lib');
 var util = require('util');
 
 var Schema = function(name, table){
-	console.log('fuck')
 	var name = function(opts) {
 		Mysqlmid.call(this, {table: table});
 	};

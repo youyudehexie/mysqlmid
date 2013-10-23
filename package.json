@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "mysql": "2.0.0-alpha8",
-    "mohair": "*"
+    "mohair": "*",
+    "coffee-script": "~1.6.3"
   }
 }
